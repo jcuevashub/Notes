@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NCard: Identifiable {
+struct NCard: Identifiable,Equatable {
     var id = UUID()
     var title: String
     var text: String
