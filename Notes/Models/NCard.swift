@@ -12,7 +12,7 @@ struct NCard: Identifiable {
     var title: String
     var text: String
     var type: TypeCard
-    var isFavorite: Bool?
+    var isFavorite: Bool = false
 }
 
 enum TypeCard: String, CaseIterable {
