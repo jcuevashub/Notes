@@ -26,17 +26,9 @@ struct NCreateNoteView: View {
                     .bold()
                     .padding(.bottom, 10)
                 
-                TextField("Titulo", text: $viewModel.title)
-                    .font(.headline)
-                    .padding()
-                
-                TextEditor(text: $viewModel.text)
-                    .scrollContentBackground(.hidden)
-                    .font(.body)
-                    .frame(height: 200)
-                    .padding()
-                    .background(Color.gray.opacity(0.1))
-                    .cornerRadius(8)
+                NTextField(placeholder: "Titulo", text: $viewModel.title)
+                NTextEditor(text: $viewModel.text)
+                  
                 HStack {
                     Text("Tamaño")
                     Spacer()
