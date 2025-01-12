@@ -11,11 +11,19 @@ struct ContentView: View {
     @StateObject var appinfo: AppInfo = AppInfo()
     
     var body: some View {
-        NListView()
-            .environmentObject(appinfo)
+        TabView {
+            NListView()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+            NListView(forFavorites: true)
+                .tabItem {
+                    Label("Favorites", systemImage: "heart")
+                }
+        }.environmentObject(appinfo)
     }
 }
 
 #Preview {
-   ContentView()
+    ContentView()
 }
