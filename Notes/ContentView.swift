@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    @StateObject var appinfo: AppInfo = AppInfo()
+    
     var body: some View {
         NListView()
+            .environmentObject(appinfo)
     }
 }
 
